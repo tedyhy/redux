@@ -8,6 +8,8 @@ import warning from './utils/warning'
 /*
 * This is a dummy function to check if the function name has been altered by minification.
 * If the function has been minified and NODE_ENV !== 'production', warn the user.
+* 验证是否在非生产环境下 Redux 是否被压缩，如果压缩混淆了(isCrushed.name !== 'isCrushed')为true，
+* 如果非生产环境下被压缩了就会给开发者一个 warn 提示。
 */
 function isCrushed() {}
 
@@ -25,6 +27,7 @@ if (
   )
 }
 
+// 暴露5个接口
 export {
   createStore,
   combineReducers,

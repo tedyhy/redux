@@ -3,6 +3,8 @@
  *
  * @param {String} message The warning message.
  * @returns {void}
+ *
+ * 如果 console 存在，就打印错误信息。
  */
 export default function warning(message) {
   /* eslint-disable no-console */
